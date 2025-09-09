@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polyglot - AI Translation App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 Polyglot</h1>
+            <p>AI-Powered Translation App</p>
+        </header>
+
+        <main>
+            <div class="translation-form">
+                <div class="input-section">
+                    <label for="inputText">Enter English text to translate:</label>
+                    <textarea 
+                        id="inputText" 
+                        placeholder="Type your English text here..."
+                        rows="4"
+                    ></textarea>
+                </div>
+
+                <div class="language-section">
+                    <label for="targetLanguage">Select target language:</label>
+                    <select id="targetLanguage">
+                        <option value="">Choose a language...</option>
+                        <option value="french">🇫🇷 French</option>
+                        <option value="german">🇩🇪 German</option>
+                        <option value="spanish">🇪🇸 Spanish</option>
+                    </select>
+                </div>
+
+                <button id="translateBtn" class="translate-btn">
+                    <span class="btn-text">Translate</span>
+                    <span class="loading" style="display: none;">Translating...</span>
+                </button>
+            </div>
+
+            <div id="resultSection" class="result-section" style="display: none;">
+                <h3>Translation Result</h3>
+                <div class="result-content">
+                    <div class="original-text">
+                        <h4>Original (English):</h4>
+                        <p id="originalText"></p>
+                    </div>
+                    <div class="translated-text">
+                        <h4 id="translatedLanguage">Translation:</h4>
+                        <p id="translatedText"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="errorSection" class="error-section" style="display: none;">
+                <h3>⚠️ Error</h3>
+                <p id="errorMessage"></p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by OpenAI • Built with ❤️</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
